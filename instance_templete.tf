@@ -1,5 +1,5 @@
 module "virtual_machine" {
-    source = "https://github.com/rajat11299/Terraform-modules//google_compute_instance"
+    source = ".//google_compute_instance"
     vm_name = "vm"
     zone_name = "us-central1-a"
     machine_types = "e2-medium"
@@ -11,13 +11,13 @@ module "virtual_machine" {
     ]
 }
 module "network_name" {
-  source = "https://github.com/rajat11299/Terraform-modules//google_compute_network"
+  source = ".//google_compute_network"
   network_name = "my-vpc"
   network_type = false
 }
 
 module "subnet_name" {
-  source = "https://github.com/rajat11299/Terraform-modules//google_compute_subnetwork"
+  source = ".//google_compute_subnetwork"
   subnet_name = "subnet-central"
   subnet_network = "my-vpc"
   subnet_region = "us-central1"
