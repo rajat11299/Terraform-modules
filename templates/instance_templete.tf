@@ -1,7 +1,5 @@
 module "virtual_machine" {
-    //source = "../modules/google_compute_instance"   
-    //source = "https://github.com/rajat11299/GCP-Terrafrom//git/files/demo/modules/google_compute_instance"
-    source = "https://github.com/rajat11299/Terraform-modules//google_compute_instance
+    source = "https://github.com/rajat11299/Terraform-modules//google_compute_instance"
     vm_name = "vm"
     zone_name = "us-central1-a"
     machine_types = "e2-medium"
@@ -13,16 +11,12 @@ module "virtual_machine" {
     ]
 }
 module "network_name" {
-  //source = "../modules/google_compute_network"
-  //source = "https://github.com/rajat11299/GCP-Terrafrom//git/files/demo/modules/google_compute_network"
   source = "https://github.com/rajat11299/Terraform-modules//google_compute_network"
   network_name = "my-vpc"
   network_type = false
 }
 
 module "subnet_name" {
-  //source = "../modules/google_compute_subnetwork"
-  //source = "https://github.com/rajat11299/GCP-Terrafrom//git/files/demo/modules/google_compute_subnetwork"
   source = "https://github.com/rajat11299/Terraform-modules//google_compute_subnetwork"
   subnet_name = "subnet-central"
   subnet_network = "my-vpc"
