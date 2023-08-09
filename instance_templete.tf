@@ -12,7 +12,7 @@ module "virtual_machine" {
 }
 module "network_name" {
   source = ".//google_compute_network"
-  network_name = "my-vpc"
+  network_name = "my-vpc-1"
   network_type = false
 }
 
