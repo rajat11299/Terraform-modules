@@ -4,7 +4,7 @@ module "virtual_machine" {
     zone_name = "us-central1-a"
     machine_types = "e2-medium"
     image_name = "debian-cloud/debian-11"
-    network_name = "my-vpc"
+    network_name = "my-vpc-1"
     subnetwork_name = "subnet-central"
     depends_on = [
       module.subnet_name
@@ -19,7 +19,7 @@ module "network_name" {
 module "subnet_name" {
   source = ".//google_compute_subnetwork"
   subnet_name = "subnet-central"
-  subnet_network = "my-vpc"
+  subnet_network = "my-vpc-1"
   subnet_region = "us-central1"
   subnet_range = "10.0.2.0/24" 
   depends_on = [
