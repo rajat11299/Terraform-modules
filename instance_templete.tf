@@ -1,6 +1,6 @@
 module "virtual_machine" {
     source = ".//google_compute_instance"
-    vm_name = "vm"
+    vm_name = "vm-1"
     zone_name = "us-central1-a"
     machine_types = "e2-medium"
     image_name = "debian-cloud/debian-11"
