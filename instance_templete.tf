@@ -1,8 +1,8 @@
 module "virtual_machine" {
     source = ".//google_compute_instance"
-    vm_name = "vm-1"
-    zone_name = "us-central1-a"
-    machine_types = "e2-medium"
+    vm_name = "vm-3"
+    zone_name = "us-central1-b"
+    machine_types = "e2-small"
     image_name = "debian-cloud/debian-11"
     network_name = "my-vpc-1"
     subnetwork_name = "subnet-central"
